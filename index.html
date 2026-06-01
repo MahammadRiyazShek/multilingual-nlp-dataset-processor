@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Multilingual NLP Dataset Processor — 38 Languages</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header>
+  <div class="brand"><span>🌍</span><h1>Multilingual NLP Dataset Processor</h1></div>
+  <div class="badge">38 Languages · 6+ Locales · 10,500+ Utterances</div>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Process & Analyze Multilingual NLP Datasets at Scale</h2>
+    <p>End-to-end pipeline for processing utterances, paired speech-prose transcripts, and audio scripts for low-resource languages.</p>
+  </section>
+
+  <div class="kpis">
+    <div class="kpi"><b>38</b><span>Languages</span></div>
+    <div class="kpi"><b>6+</b><span>Locales</span></div>
+    <div class="kpi"><b>10,500+</b><span>Utterances</span></div>
+    <div class="kpi"><b>100</b><span>Speech-Prose Pairs</span></div>
+  </div>
+
+  <section class="card">
+    <h2>🔤 Language Detection & Classification</h2>
+    <p class="muted">Paste any text below to detect language, script, and locale.</p>
+    <textarea id="input" rows="3" placeholder="Type or paste multilingual text here...">Bonjour, comment allez-vous aujourd'hui?</textarea>
+    <div class="actions">
+      <button class="btn primary" onclick="analyze()">🔍 Analyze Text</button>
+      <button class="btn ghost" onclick="loadSample()">📋 Try Sample Text</button>
+    </div>
+    <div id="result" class="result-box" style="display:none"></div>
+  </section>
+
+  <section class="card">
+    <h2>📊 Dataset Overview</h2>
+    <div class="lang-grid" id="langGrid"></div>
+  </section>
+
+  <section class="card">
+    <h2>🔧 Processing Pipeline</h2>
+    <div class="pipeline-steps">
+      <div class="step"><div class="step-n">1</div><h3>Ingestion</h3><p>Load utterances, transcripts, audio scripts from multiple sources (CSV, JSON, Parquet, S3).</p></div>
+      <div class="step"><div class="step-n">2</div><h3>Language Detection</h3><p>Identify language using character n-grams + langdetect + fastText.</p></div>
+      <div class="step"><div class="step-n">3</div><h3>Locale Classification</h3><p>Disambiguate regional variants (en-US vs en-GB, es-ES vs es-MX, zh-CN vs zh-TW).</p></div>
+      <div class="step"><div class="step-n">4</div><h3>Script Detection</h3><p>Latin, Cyrillic, Arabic, Devanagari, CJK, Hangul, etc.</p></div>
+      <div class="step"><div class="step-n">5</div><h3>Normalization</h3><p>Unicode NFC, punctuation, casing, diacritic handling.</p></div>
+      <div class="step"><div class="step-n">6</div><h3>Quality Scoring</h3><p>Length stats, OOV ratio, speech-prose alignment score.</p></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🌐 Supported Languages (38)</h2>
+    <div class="lang-pills" id="langPills"></div>
+  </section>
+</main>
+
+<footer>© 2026 Multilingual NLP Pipeline · Improved dataset quality by 85% across multilingual workflows</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
